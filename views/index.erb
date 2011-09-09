@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head>
+
+<link rel="stylesheet" type="text/css" href="page.css"/>
+
+<!-- LED Stylesheet - things will look weird without this! -->
+<link rel="stylesheet" type="text/css" href="ledstyles.css"/>
+
+
+</head>
+<body>
+
+<!-- START LED SCROLLER CODE -->
+<!-- Main scroll code -->
+<script type="text/javascript" src="ledscroller.js"></script>
+
+<!-- 6x6 character definitions -->
+<script type="text/javascript" src="chardefs-6x6.js"></script>
+
+<div id="ledSet"><!-- This is a placeholder - the LED scroller will be rendered in this div --></div>
+<h1><%= @info %></h1>
+<script>
+
+// Sets the size of the LEDs - 16, 32, 48, 64 or 128 pixels.
+var ledSize = 32;
+
+// Sets the desired spacing between LEDs
+var ledPadding = 1;
+
+// Sets the desired LED colour. Acceptable values are 'red, 'amber', 'yellow', 'green', 'blue', 'uv' (purple), 'white', or 'rainbow'.
+var ledColor = 'green';
+
+// Sets the scroll delay. Larger values mean slower scrolling.
+var scrollDelay = 50;
+
+// Adjusts the amount of motion blur. Higher values mean more blurring (and less readability).
+var blurLevel = 0.0;
+
+// Create the LED matrix - change the first value if you want to alter the width of the display.
+createLedMatrix(36,6);
+
+// Type your message here:
+setMessage("<%= @message %>");
+
+// Start the scrolling!
+scroll();
+
+</script>
+<!-- END LED SCROLLER CODE -->
+
+</body>
+</html>

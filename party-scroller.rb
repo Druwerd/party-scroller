@@ -10,7 +10,7 @@ PHONE_NUMBER = "(XX) XXX-XXXX"
 set :root, File.dirname(__FILE__)
 
 get '/' do
-  #@message = TextMessage.all.last.body
+  @refresh_rate = 30
   @info = "Text your message to #{PHONE_NUMBER} to display it here!"
   @message = @info
   textmessage = TextMessage.all(:read => false).first

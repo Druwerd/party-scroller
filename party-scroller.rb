@@ -12,7 +12,7 @@ set :root, File.dirname(__FILE__)
 
 get '/' do
   @refresh_rate = 30
-  @info = "Text your message to #{PHONE_NUMBER} to display it here!"
+  @info = "Text #{PHONE_NUMBER} to display your message here."
   @message = @info
   textmessage = TextMessage.all(:read => false).first
   textmessage = TextMessage.all.last if textmessage.nil?

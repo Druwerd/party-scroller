@@ -1,2 +1,25 @@
 Party Scroller:
 Displays text messages sent to a Google Voice number on a web page
+
+Requirements:
+	sqlite
+	Gmail http://mail.google.com
+	Google Voice http://www.google.com/voice
+
+Gem Dependencies:
+	data_mapper
+	gmail
+	sinatra
+	sqlite3-ruby
+	
+Setup:
+	install sqlite
+	create gmail account
+	setup google voice with text forwarding to gmail
+	edit 'confg.yml'
+	
+Run:
+	ruby party-scroller.rb
+	ruby gmail-script.rb
+	
+	load http://localhost:4567/ in your web browser

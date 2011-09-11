@@ -1,0 +1,7 @@
+gmail:
+    login: user
+    password: password
+    return_address: XXXXXXXXXXX.XXXXXXXXXXX.xxxxxxxxxx@txt.voice.google.com
+    
+google-voice:
+    phone_number: (XXX) XXX-XXXX   

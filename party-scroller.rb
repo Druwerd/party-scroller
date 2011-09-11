@@ -5,7 +5,8 @@ require 'sinatra'
 require 'erb'
 require 'text_message.rb'
 
-PHONE_NUMBER = "(XX) XXX-XXXX"
+SETTINGS = YAML.load_file('config.yml')
+PHONE_NUMBER = SETTINGS["google-voice"]["phone_number"]
 
 set :root, File.dirname(__FILE__)
 

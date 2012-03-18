@@ -7,8 +7,10 @@ require 'text_message.rb'
 
 SETTINGS = YAML.load_file('config.yml')
 PHONE_NUMBER = SETTINGS["google-voice"]["phone_number"]
+WEB_PORT = SETTINGS["webserver"]["port"]
 
 set :root, File.dirname(__FILE__)
+set :port, WEB_PORT
 
 get '/' do
   @refresh_rate = 30

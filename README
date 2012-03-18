@@ -5,15 +5,9 @@ Requirements:
 	sqlite
 	Gmail http://mail.google.com
 	Google Voice http://www.google.com/voice
-
-Gem Dependencies:
-	data_mapper
-	gmail
-	sinatra
-	sqlite3-ruby
 	
 Setup:
-	install sqlite
+	bundle install
 	create gmail account
 	setup google voice with text forwarding to gmail
 	edit 'confg.yml'

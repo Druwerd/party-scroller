@@ -20,6 +20,7 @@ Gmail.new(LOGIN, PASSWORD) do |gmail|
       next if message.body.nil?
       puts message
       sms_text = message.body.to_s.gsub("\n", " ")
+      sms_text = sms_text.gsub(/[^\w!\.,\?\-:\(\)]/, "?")
       sms_text = sms_text.gsub(/Sent using SMS-to-email.*/, "")
       puts sms_text
       begin

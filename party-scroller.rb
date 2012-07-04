@@ -3,11 +3,11 @@
 require 'rubygems'
 require 'sinatra'
 require 'erb'
-require 'text_message.rb'
+require './text_message.rb'
 
 SETTINGS = YAML.load_file('config.yml')
-PHONE_NUMBER = SETTINGS["google-voice"]["phone_number"]
-WEB_PORT = SETTINGS["webserver"]["port"]
+PHONE_NUMBER = ENV["GOOGLE_VOICE_NUMBER"] || SETTINGS["google-voice"]["phone_number"]
+WEB_PORT = ENV["PARTY_SCROLLER_PORT"] || SETTINGS["webserver"]["port"]
 
 set :root, File.dirname(__FILE__)
 set :port, WEB_PORT

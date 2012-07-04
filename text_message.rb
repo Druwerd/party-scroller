@@ -1,4 +1,4 @@
-require 'dbconfig.rb'
+require './dbconfig.rb'
 
 class TextMessage #< DataMapper::Base
     include DataMapper::Resource

@@ -3,11 +3,11 @@
 require 'rubygems'
 require 'gmail'
 require 'yaml'
-require 'text_message.rb'
+require './text_message.rb'
 
 SETTINGS = YAML.load_file('config.yml')
-LOGIN = SETTINGS["gmail"]["login"]
-PASSWORD = SETTINGS["gmail"]["password"]
+LOGIN = ENV["GMAIL_LOGIN"] || SETTINGS["gmail"]["login"]
+PASSWORD = ENV["GMAIL_PASSWORD"] || SETTINGS["gmail"]["password"]
 
 FREQUENCY = 5 # How often (in seconds) to check for new messages
 
